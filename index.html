@@ -6,7 +6,7 @@
 
     <script src="https://code.angularjs.org/1.5.7/angular.js"></script>
     <script src="app.js"></script>
-    <script src="./controller/controllerShop.js"></script>
+    <script src="controller/productsController.js"></script>
     <script src="./directive/directiveShop.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" rel="stylesheet"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -14,7 +14,10 @@
 
 
 </head>
-<body>
+<body ng-app="app">
+
+
+<div  ng-controller="controllerShop">
 
 
 
@@ -53,35 +56,21 @@
 </div>
 
 <div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-        <div class="col-md-3">
+
+    <div class="row" ng-controller="productsController as productsCtrl">
+        <div class="col-lg-3">
             <h2>GARIBALDO</h2> <input type="checkbox">
             <p>product 1 </p>
-            <img class="img" src="./images/garibaldo.jpg">
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <img class="img" src="./images/{{imgUrl}}">
+            <p><a class="btn btn-default" href="#" role="button">ADD &raquo;</a></p>
         </div>
-        <div class="col-md-3">
-            <h2>COOKIEMAN</h2> <input type="checkbox">
-            <p>product 1 </p>
-            <img class="img" src="./images/cookieman.png">
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-3">
-            <h2>BETO</h2> <input type="checkbox">
-            <p>product 1</p>
-            <img class="img" src="./images/beto.png">
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-3">
-            <h2>ELMO</h2><input type="checkbox">
-            <p>product 1</p>
-            <img class="img" src="./images/Elmo.png">
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
+
     </div>
 
     <hr>
+
+</div>
+
 
 </body>
 </html>

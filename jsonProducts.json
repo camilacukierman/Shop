@@ -1,0 +1,28 @@
+[
+  {
+    "name": "garibaldo",
+    "price": "99.99",
+    "image": "garibaldo.png",
+    "description": "lalalalalalal lalala la"
+  },
+  {
+    "name": "cookierman",
+    "price": "99.99",
+    "image": "cookierman.png",
+    "description": "lalalalalalal lalala la"
+  },
+  {
+    "name": "beto",
+    "price": "99.99",
+    "image": "beto.png",
+    "description": "lalalalalalal lalala la"
+  },
+  {
+    "name": "elmo",
+    "price": "99.99",
+    "image": "elmo.png",
+    "description": "lalalalalalal lalala la"
+  }
+]
+
+https://api.myjson.com/bins/2zexd

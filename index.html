@@ -5,25 +5,25 @@
     <title>index_shop</title>
 
     <script src="https://code.angularjs.org/1.5.7/angular.js"></script>
+    <script src="https://code.angularjs.org/1.5.7/angular-route.js"></script>
     <script src="app.js"></script>
-    <script src="controller/controllerShop.js"></script>
+    <script src="./controller/controllerShop.js"></script>
     <script src="./directive/directiveShop.js"></script>
+    <script src="./sevices/factoryShop.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" rel="stylesheet"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="./css/css_Shop.css">
 
 
 </head>
-<body ng-app="app">
-
-
-
+<body ng-app="myApp">
 
 
 <nav class="navbar  navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
 
             </button>
@@ -32,10 +32,12 @@
         <div id="navbar" class="navbar-collapse collapse">
             <form class="navbar-form navbar-right">
                 <div class="form-group">
-                <button type="submit" class="btn btn-success">CART</button>
+                    <button type="submit" href="#/goto3" class="btn btn-success">CART</button>
+                </div>
             </form>
-        </div><!--/.navbar-collapse -->
-    </div>
+        </div>
+    </div><!--/.navbar-collapse -->
+
 </nav>
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -49,21 +51,26 @@
 
 <div class="container">
 
-    <div class="row" ng-controller="controllerShop">
 
-        <div class="col-lg-3 "  style="display:inline-block">
+    <div ng-view></div>
+
+    <!--<div ng-controller="controllerShop">
+
+        <div class="col-lg-3 ">
             <div ng-repeat="product in products">
-            <h2>{{product.name}}</h2> <input type="checkbox">
-            <p>{{product.price | currency}} </p>
+                <p>{{product.price | currency}} </p>
                 <p>{{product.description}} </p>
-            <img class="img" ng-src="{{product.image}}">
-            <p><a class="btn btn-default" href="#" role="button">ADD &raquo;</a></p>
-                </div>
+                <img class="img" ng-src="{{product.image}}">
+                <p><a class="btn btn-default" href="#" role="button">ADD &raquo;</a></p>
+                <a class="btn btn-default" href="#/goto2" role="button">DETAILS &raquo;</a>
+            </div>
         </div>
 
-    </div>
+    </div>-->
+</div>
 
-    <hr>
+
+<hr>
 
 </div>
 

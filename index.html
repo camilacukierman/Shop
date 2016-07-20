@@ -6,7 +6,7 @@
 
     <script src="https://code.angularjs.org/1.5.7/angular.js"></script>
     <script src="app.js"></script>
-    <script src="controller/productsController.js"></script>
+    <script src="controller/controllerShop.js"></script>
     <script src="./directive/directiveShop.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" rel="stylesheet"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -17,7 +17,6 @@
 <body ng-app="app">
 
 
-<div  ng-controller="controllerShop">
 
 
 
@@ -26,21 +25,14 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+
             </button>
 
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <form class="navbar-form navbar-right">
                 <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-success">Sign in</button>
+                <button type="submit" class="btn btn-success">CART</button>
             </form>
         </div><!--/.navbar-collapse -->
     </div>
@@ -57,12 +49,16 @@
 
 <div class="container">
 
-    <div class="row" ng-controller="productsController as productsCtrl">
-        <div class="col-lg-3">
-            <h2>GARIBALDO</h2> <input type="checkbox">
-            <p>product 1 </p>
-            <img class="img" src="./images/{{imgUrl}}">
+    <div class="row" ng-controller="controllerShop">
+
+        <div class="col-lg-3 "  style="display:inline-block">
+            <div ng-repeat="product in products">
+            <h2>{{product.name}}</h2> <input type="checkbox">
+            <p>{{product.price | currency}} </p>
+                <p>{{product.description}} </p>
+            <img class="img" ng-src="{{product.image}}">
             <p><a class="btn btn-default" href="#" role="button">ADD &raquo;</a></p>
+                </div>
         </div>
 
     </div>

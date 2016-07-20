@@ -2,27 +2,27 @@
   {
     "name": "garibaldo",
     "price": "99.99",
-    "image": "garibaldo.png",
+    "image": "images/garibaldo.jpg",
     "description": "lalalalalalal lalala la"
   },
   {
     "name": "cookierman",
     "price": "99.99",
-    "image": "cookierman.png",
+    "image": "images/cookierman.png",
     "description": "lalalalalalal lalala la"
   },
   {
     "name": "beto",
     "price": "99.99",
-    "image": "beto.png",
+    "image": "images/beto.png",
     "description": "lalalalalalal lalala la"
   },
   {
     "name": "elmo",
     "price": "99.99",
-    "image": "elmo.png",
+    "image": "images/elmo.png",
     "description": "lalalalalalal lalala la"
   }
 ]
 
-https://api.myjson.com/bins/2zexd
+//https://api.myjson.com/bins/2zexd

@@ -1,6 +1,7 @@
 /**
- * Created by itc_user on 7/19/2016.
+ * Created by itc_user on 7/20/2016.
  */
+
 
 
 
@@ -10,5 +11,8 @@
     app.controller('controllerShop',function ($scope, factoryShop ) {
         $scope.products=factoryShop.getProducts();
 
-    });
+        });
 })();
+
+
+

@@ -7,6 +7,15 @@
 <div class="jumbotron">
     <h1>My Cart</h1>
 
+    <div class="jumbotron">
+
+        <img class="img" ng-src="{{chosenProduct.image}}">
+        <h1>{{chosenProduct.name}}</h1>
+        <p class="lead">{{chosenProduct.price | currency  }}.</p>
+
+        <button class="btn btn-default" href="#" role="button" ng-click="count =count +1"> + </button>
+        <button class="btn btn-default" href="#" role="button" ng-click="count =count -1"> - </button>  <p> {{count}}</p>
+
     <p><a class="btn btn-default" href="#/gotoMain" role="button">BACK &raquo;</a></p>
     <p><a class="btn btn-default" href="#/gotoMain" role="button">PAY &raquo;</a></p>
 </div>

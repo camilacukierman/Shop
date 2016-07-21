@@ -5,15 +5,19 @@
 
 
         <div class="jumbotron">
-            <img class="img" ng-src="{{product.image}}">
-            <h1>{{product.name}}</h1>
-            <p class="lead">{{product.price | currency  }}.</p>
-            <p class="lead">{{product.description}}.</p>
-            <p class="lead">{{product.detail}}.</p>
-            <p><a class="btn btn-default" href="#" role="button">+ &raquo;</a></p>
-            <p><a class="btn btn-default" href="#" role="button">- &raquo;</a></p>
-            <p><a class="btn btn-default" href="#/gotoMain" role="button">BACK &raquo;</a></p>
-        </div>
 
+            <h1>{{chosenProduct.name}}</h1>
+            <img class="img" ng-src="{{chosenProduct.image}}">
+            <p class="lead">{{chosenProduct.price | currency  }}.</p>
+            <p class="lead">{{chosenProduct.description}}.</p>
+            <p class="lead">{{chosenProduct.detail}}.</p>
+
+            <button class="btn btn-default" href="#" role="button" ng-click="count =count +1"> + </button>
+            <button class="btn btn-default" href="#" role="button" ng-click="count =count -1"> - </button>  <p> {{count}}</p>
+
+            <p><a class="btn btn-default" href="#/gotoMain" role="button"> BACK  </a></p>
+            <p><a class="btn btn-default" href="#/gotoCart" role="button"> FINISH  </a></p>
+
+        </div>
 
 

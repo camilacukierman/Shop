@@ -11,12 +11,12 @@
                     templateUrl: "./views/view1.html",
                     controller: 'controllerShop'
                 })
-                .when('/goto2', {
+                .when('/gotoProduct/:id', {
                     templateUrl: "./views/view2.html",
                     controller: 'controllerShop'
                 })                
-                .when('/goto3', {
-                    templateUrl: "./view/view3.html", 
+                .when('/gotoCart', {
+                    templateUrl: "./views/view3.html", 
                     controller: 'controllerShop'
                 })
                 .otherwise({redirectTo: '/'});

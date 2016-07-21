@@ -9,3 +9,7 @@
     height:150px;
     width: 100px;
 }
+
+.products{
+    display: inline-block;;
+}

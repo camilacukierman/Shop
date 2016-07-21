@@ -12,12 +12,12 @@
             <p class="lead">{{chosenProduct.description}}.</p>
             <p class="lead">{{chosenProduct.detail}}.</p>
 
-            <button class="btn btn-default" href="#" role="button" ng-click="chosenProduct.numBought =chosenProduct.numBought+1"> + </button>
-            <button class="btn btn-default" href="#" role="button" ng-click="chosenProduct.numBought=chosenProduct.numBought-1"> - </button>
-            <p>{{chosenProduct.numBought}}</p>
+            <button class="btn btn-default" href="#" role="button" ng-click="increaseCounter()"> + </button>
+            <button class="btn btn-default" href="#" role="button" ng-click="decreaseCounter()"> - </button>
+            <p>{{counter}}</p>
 
             <p><a class="btn btn-default" href="#/gotoMain" role="button"> BACK  </a></p>
-            <p><a class="btn btn-default" href="#/gotoCart" role="button"> BUY ME  </a></p>
+            <p><a class="btn btn-default" ng-click="addToCart(chosenProduct.name)" role="button"> BUY ME  </a></p>
 
         </div>
 

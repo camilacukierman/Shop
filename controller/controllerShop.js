@@ -12,7 +12,7 @@
     app.controller('controllerShop', function ($scope, factoryShop, $routeParams) {
         $scope.products = [];
         $scope.cart = [];
-
+        $scope.counter = 0;
         angular.element(document).ready(function () {
             getProducts();
         });
@@ -22,13 +22,32 @@
         }
 
         if (localStorage.getItem("cart")) {
-            $scope.products = JSON.parse(localStorage.getItem("cart"));
+            $scope.cart = JSON.parse(localStorage.getItem("cart"));
         }
 
         $scope.addToCart = function (product) {
-            $scope.cart.push(product);
+            if ($scope.counter > 0){
+            var selectedProduct = $scope.products.filter(function (item) {
+                return item.id == product;
+            })[0];
+            selectedProduct.quantity =  $scope.counter;
+
+            $scope.cart.push(selectedProduct);
             localStorage.setItem("cart", JSON.stringify($scope.cart));
+            location.hash = "/gotoCart"
+            }else{
+                location.hash = "/";
+            }
         };
+
+        $scope.increaseCounter = function (){
+            $scope.counter++;
+        }
+
+        $scope.decreaseCounter = function (){
+            $scope.counter--;
+        }
+
 
         function getProducts() {
             factoryShop.getProducts().then(function (data) {
@@ -45,6 +64,4 @@
     });
 })();
 
-if (localStorage.getItem(count)){
-    $scope.products = JSON.parse(localStorage.getItem("cart"));
-}
+

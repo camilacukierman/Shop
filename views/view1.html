@@ -1,18 +1,15 @@
 
 
 
-<div class="row">
 
 
-    <div class="col-lg-3 ">
-        <div ng-repeat="product in products" class="products">
+<div class="products">
+        <div ng-repeat="product in products" class="product">
+
             <h1>{{product.name}}</h1>
             <p>{{product.price | currency}} </p>     <a class="btn btn-default" href="#/gotoProduct/{{product.id}}" role="button">DETAILS &raquo;</a>
             <p>{{product.description}} </p>
             <img class="img" ng-src="{{product.image}}">
 
         </div>
-    </div>
-
-
 </div>

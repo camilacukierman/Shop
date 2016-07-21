@@ -12,10 +12,21 @@
 }
 
 .products{
-    display: inline-block;;
+    display: block;
+    width: 70%;
+    margin: auto;
+    text-align: center;
 }
 
 .jumbotron {
     background-color: inherit;
+}
+
+.product{
+    display: inline-block;
+    margin: 10px;
+    border: 5px solid yellow;
+    padding: 10px;
+    width: 245px;
 }
 

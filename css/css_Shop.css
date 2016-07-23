@@ -21,7 +21,8 @@
 .jumbotron {
     background-color: inherit;
 }
-
+.product h1{ font-size: 30px;}
+.product p{ font-size: 15px;}
 .product{
     display: inline-block;
     margin: 10px;
@@ -30,3 +31,8 @@
     width: 245px;
 }
 
+.total {
+    border: 5px solid #FAD716;
+    width: 240px;
+    padding: 20px;
+}

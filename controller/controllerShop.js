@@ -26,17 +26,23 @@
         }
 
         $scope.addToCart = function (product) {
+            var i;
             if ($scope.counter > 0){
-            var selectedProduct = $scope.products.filter(function (item) {
+                var selectedProduct = $scope.products.filter(function (item) {
                 return item.id == product;
             })[0];
-            selectedProduct.quantity =  $scope.counter;
-
+                for(i=0; i<$scope.cart.length;i++){
+                    if ($scope.cart[i].name == product){
+                        $scope.cart.splice(i, 1); // Remove index i from the cart
+                    }
+                }
+                selectedProduct.quantity =  $scope.counter;
+                selectedProduct.total = Math.ceil(selectedProduct.quantity* selectedProduct.price);
             $scope.cart.push(selectedProduct);
             localStorage.setItem("cart", JSON.stringify($scope.cart));
-            location.hash = "/gotoCart"
+            location.hash = "/gotoCart";
             }else{
-                location.hash = "/";
+                alert("You can't add 0 products to the cart");
             }
         };
 
@@ -60,7 +66,14 @@
             return item.id == $routeParams.id;
         })[0];
 
+        $scope.FinnishAndPay= function (){
+            localStorage.removeItem("cart");
+            localStorage.removeItem("products");
+            alert("PAYING");
+            location.hash = "/gotoCart#"+Math.floor((Math.random() * 10) + 1); //Put random number so we can refresh the page
+            window.scrollTo(0, 0); //Scroll to top
 
+        }
     });
 })();
 

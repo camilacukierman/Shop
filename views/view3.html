@@ -19,8 +19,15 @@
             <p>{{product.description}} </p>
             <img class="img" ng-src="{{product.image}}">
 
+
         </div>
     </div>
             </div>
+            <div class="total">
+            <div ng-repeat="product in cart">
+                <li> {{product.name}} = {{product.total | currency}} </li>
+            </div></div>
+            <br>
             <p><a class="btn btn-default" href="#/gotoMain" role="button">BACK &raquo;</a></p>
-            <p><a class="btn btn-default" href="#/gotoMain"  onClick="$window.location.reload()" role="button">PAY &raquo;</a></p>
+            <p><a class="btn btn-default"  ng-click="FinnishAndPay()" role="button">PAY &raquo;</a></p>
+

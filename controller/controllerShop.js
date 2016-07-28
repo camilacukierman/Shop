@@ -1,4 +1,7 @@
 /**
+ * Created by itc_user on 7/28/2016.
+ */
+/**
  * Created by itc_user on 7/19/2016.
  */
 
@@ -40,7 +43,7 @@
                 selectedProduct.total = Math.ceil(selectedProduct.quantity* selectedProduct.price);
             $scope.cart.push(selectedProduct);
             localStorage.setItem("cart", JSON.stringify($scope.cart));
-            location.hash = "/gotoCart";
+            location.hash = "/viewCart";
             }else{
                 alert("You can't add 0 products to the cart");
             }
@@ -48,11 +51,13 @@
 
         $scope.increaseCounter = function (){
             $scope.counter++;
-        }
+        };
 
         $scope.decreaseCounter = function (){
-            $scope.counter--;
-        }
+            if ($scope.counter > 0){
+                $scope.counter--;
+            }
+        };
 
 
         function getProducts() {
@@ -70,11 +75,9 @@
             localStorage.removeItem("cart");
             localStorage.removeItem("products");
             alert("PAYING");
-            location.hash = "/gotoCart#"+Math.floor((Math.random() * 10) + 1); //Put random number so we can refresh the page
+            location.hash = "/viewCart#"+Math.floor((Math.random() * 10) + 1); //Put random number so we can refresh the page
             window.scrollTo(0, 0); //Scroll to top
 
         }
     });
 })();
-
-

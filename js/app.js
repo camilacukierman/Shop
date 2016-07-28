@@ -11,11 +11,11 @@
                     templateUrl: "./views/view1.html",
                     controller: 'controllerShop'
                 })
-                .when('/gotoProduct/:id', {
+                .when('/viewProduct/:id', {
                     templateUrl: "./views/view2.html",
                     controller: 'controllerShop'
                 })                
-                .when('/gotoCart', {
+                .when('/viewCart', {
                     templateUrl: "./views/view3.html", 
                     controller: 'controllerShop'
                 })

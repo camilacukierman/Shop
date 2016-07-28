@@ -9,7 +9,7 @@
 
         var myFact ={};
         myFact.getProducts=function () {
-            return  $http.get('https://api.myjson.com/bins/28h91').then(function(data) {
+            return  $http.get('https://api.myjson.com/bins/1fupb').then(function(data) {
                 return data.data;
             });
         };

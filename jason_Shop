@@ -1,0 +1,74 @@
+    [
+      {
+        "name": "BigBird",
+        "price": "99.99",
+        "image": "images/garibaldo.jpg",
+        "description": "This is a very cute toy",
+        "detail": "size: 100x70 cm, material:plush,  filling: 100%cotton, type:sesamotoy",
+        "id": "BigBird"
+
+      },
+      {
+        "name": "CokieMonster",
+        "price": "99.99",
+        "image": "images/cookieman.png",
+        "description": "This is a very cute toy",
+        "detail": "size: 100x70 cm, material:plush,  filling: 100%cotton, type:sesamotoy",
+        "id": "CokieMonster"
+
+      },
+      {
+        "name": "Bert",
+        "price": "99.99",
+        "image": "images/beto.png",
+        "description": "This is a very cute toy",
+        "detail": "size: 100x70 cm, material:plush,  filling: 100%cotton, type:sesamotoy",
+        "id": "Bert"
+
+      },
+      {
+        "name": "Elmo",
+        "price": "99.99",
+        "image": "images/elmo.png",
+        "description": "This is a very cute toy",
+        "detail": "size: 100x70 cm, material:plush,  filling: 100%cotton, type:sesamotoy",
+        "id": "Elmo"
+
+      },
+      {
+        "name": "Oscar",
+        "price": "99.99",
+        "image": "images/oscar.png",
+        "description": "This is a very cute toy",
+        "detail": "size: 100x70 cm, material:plush,  filling: 100%cotton, type:sesamotoy",
+        "id": "Oscar"
+
+      },
+      {
+        "name": "Grover",
+        "price": "99.99",
+        "image": "images/grover.png",
+        "description": "This is a very cute toy",
+        "detail": "size: 100x70 cm, material:plush,  filling: 100%cotton, type:sesamotoy",
+        "id": "Grover"
+
+      },
+      {
+        "name": "Telly",
+        "price": "99.99",
+        "image": "images/telly.png",
+        "description": "This is a very cute toy",
+        "detail": "size: 100x70 cm, material:plush,  filling: 100%cotton, type:sesamotoy",
+        "id": "Telly"
+
+      },
+      {
+        "name": "Count",
+        "price": "99.99",
+        "image": "images/count.jpg",
+        "description": "This is a very cute toy",
+        "detail": "size: 100x70 cm, material:plush,  filling: 100%cotton, type:sesamotoy",
+        "id": "Count"
+
+      }
+    ]

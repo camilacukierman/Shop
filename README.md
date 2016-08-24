@@ -1,4 +1,4 @@
-# Shop
+
 
 Done during the ITC Program the "Plaza Sesamo Shop" is a online shop made using Angular.
 The main goal was to learn how to work with Angular, and the views and the other particular things.

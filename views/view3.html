@@ -10,24 +10,25 @@
             <h1>My Cart</h1>
 
             <div class="jumbotron">
-    <div class="products">
-        <div ng-repeat="product in cart" class="product">
-
-            <h1>{{product.name}}</h1>
-            <p>{{product.price | currency}} </p>
-            <p>{{product.quantity}} </p>
-            <p>{{product.description}} </p>
-            <img class="img" ng-src="{{product.image}}">
+    <div >
+        <div ng-repeat="product in cart" >
+            <div class="product">
+            <p>{{product.name }}  - {{product.quantity}}</p>
+            <img class="img" ng-src="{{product.image}}"> <br>
+            <p> Total: {{product.total | currency}} </p>
 
 
+             </div>
         </div>
     </div>
-            </div>
-            <div class="total">
+
+            <div class="product">
             <div ng-repeat="product in cart">
                 <li> {{product.name}} = {{product.total | currency}} </li>
             </div></div>
             <br>
-            <p><a class="btn btn-default" href="#/Home" role="button">HOME &raquo;</a></p>
-            <p><a class="btn btn-default"  ng-click="FinnishAndPay()" role="button">PAY &raquo;</a></p>
+            <a class="btn btn-default button" href="#/Home" role="button">HOME  </a>
+            <a class="btn btn-default button"  ng-click="FinnishAndPay()" role="button">PAY </a>
+
+  </div>
 

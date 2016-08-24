@@ -7,7 +7,7 @@
         <div ng-repeat="product in products" class="product">
 
             <h1>{{product.name}}</h1>
-            <p>{{product.price | currency}} </p>     <a class="btn btn-default" href="#/viewProduct/{{product.id}}" role="button">DETAILS &raquo;</a>
+            <p>{{product.price | currency}} </p>     <a class="btn btn-default button" href="#/viewProduct/{{product.id}}" role="button">DETAILS</a>
             <p>{{product.description}} </p>
             <img class="img" ng-src="{{product.image}}">
 

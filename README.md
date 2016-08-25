@@ -6,5 +6,3 @@ The app is totally intuitive for the user, specially because is made for kids to
 The landing page shows the  avaiable products, followed by details page with the option to up in the cart.
 After that, just clicking  in the paying option or going back to the main page.
 
-
-helllo guilad
